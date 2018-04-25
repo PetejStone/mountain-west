@@ -1,0 +1,14 @@
+.testimony img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.history {
+  & img {
+    display: block;
+    max-width: 100%;
+    @extend %center;
+  
+  }
+}

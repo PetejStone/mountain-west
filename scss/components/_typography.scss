@@ -1,0 +1,39 @@
+@import url($font-url-google + "Source+Sans+Pro" + "|Catamaran");
+
+* {
+  font-family: 'Source Sans Pro';
+}
+
+.big-quote {
+  font-size: 3em;
+  &--mark {
+    font-size: 6em;
+    display: inline-block;
+    width: fit-content;
+    position: absolute;
+    height: 0px;
+    font-family: 'Catamaran';
+    &:first-child{
+      transform: rotate(180deg);
+    }
+  }
+}
+
+
+
+.user {
+  font-weight: $font-weight--bold;
+  font-size: 1em;
+}
+
+.history {
+  // & h2 {
+  //   color: $white;
+  //   border-bottom: 2px solid $white;
+  //   width: fit-content;
+  //   @extend %center;
+    padding-top: 10em;
+  //   text-shadow: 1px 1px 2px $black;
+  //
+  // }
+}

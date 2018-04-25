@@ -1,0 +1,9 @@
+#nav-icon {
+  display: inline-block;
+  cursor: pointer;
+  @extend %center;
+  transform: translateY(50%) skewY(2deg);
+  position: absolute;
+  top: 1em;
+  right: 2em;
+}

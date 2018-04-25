@@ -1,0 +1,155 @@
+
+header {
+  background-image: url('../images/mountains.jpg');
+  background-size: cover;
+  max-width: 100%;
+  height: 50em;
+  & h1 {
+    color: $white;
+    padding: 2em;
+    border: 5px solid $white;
+    text-align: center;
+    width: fit-content;
+    @extend %center;
+  }
+  & .layer {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(rgba(204, 230, 255, .6),$white);
+    @include flexy(flex, column, null, center);
+  }
+}
+
+main {
+  margin-top: 10em;
+  min-height:100vh;
+  .column-one,
+  .column-two {
+    height: 100%;
+    width: 50%;
+  }
+  .column-one {
+      border-right: 2px solid $main-color;
+  }
+  & h2 {
+    text-align: center;
+  }
+  & p {
+    padding: 0;
+    margin: 2em;
+    font-size: 2em;
+  }
+
+  & .section-one {
+    @include flexy(flex, row);
+  }
+}
+
+.testimonials {
+    width: 100%;
+    margin-left: 2em;
+    &--intro {
+      width: 65%;
+      padding-left: 10em;
+    }
+    &--block {
+      @include flexy(flex,row);
+      width: 100%;
+      & .big-quote {
+        width: 45%;
+      }
+    }
+    & .corner-border {
+      border-right: 2px solid $main-color;
+      border-bottom: 2px solid $main-color;
+      width: 2em;
+      height: 2em;
+      float: right;
+      transform: translateY( -100%);
+    }
+    &--list {
+      @include flexy(flex, column);
+      float: right;
+      width: 35%;
+      margin-top: 1em;
+    }
+    & .testimony {
+      margin-top: 3em;
+      & p {
+        margin: 0;
+      }
+    }
+  }
+
+  h2 {
+    width: fit-content;
+    @extend %center;
+    border-bottom: 1px solid $main-color;
+  }
+
+  .history {
+    background: linear-gradient($white, $white, rgba(204, 230, 255, 0.2), $white, $white, rgba(204, 230, 255, 0.2),$white, $white);
+
+  }
+  .chart__image {
+    background-image: url('../images/chart.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    &--layer {
+      height: 30em;
+      background-size: cover;
+      background: linear-gradient($white, rgba(204, 230, 255, .6), $white);
+    }
+  }
+
+  .family-owned {
+    margin-top: 10em;
+    width: 65%;
+    float: right;
+    padding-right: 10em;
+    & .corner-border {
+      border-left: 2px solid $main-color;
+      border-bottom: 2px solid $main-color;
+      width: 2em;
+      height: 2em;
+      transform: translateY(-100%);
+    }
+  }
+
+  .layer {
+    clear: both;
+  }
+
+  .quote {
+    @include flexy(flex, row);
+    clear: both;
+    &--intro {
+      width: 45%;
+    }
+    &--get {
+      width: 65%;
+      @include flexy(flex, column-reverse, null, center);
+      background-image: url('../images/clouds.jpg') ;
+      background-size: cover;
+      background-position: 15px -75px;
+    }
+      &--layer {
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(farthest-side at 50% 75%, rgba(204, 230, 255,.6), $white);
+        @include flexy(flex, column, null, center);
+      }
+       & button {
+        width: 55%;
+        @extend %center;
+        height: 3em;
+        border: none;
+        border-radius: 5px;
+        background-color: $nav-highlight;
+        color: $white;
+        font-size: 1em;
+        cursor: pointer;
+
+      }
+    }

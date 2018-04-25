@@ -1,0 +1,25 @@
+[class^=icon-] { //Targets all 'sprite' icons
+  display: block;
+  width: 42px;
+  height: 32px;
+  background: url('../icons/sprite.svg');
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: all .2s;
+  @extend %center;
+  // &:hover {
+  //   transform: scale(1.1);
+  // }
+}
+
+
+//targets different icons in the sprite sheet by changing the background position to the negative X value
+.icon-horizon-black {
+  background-position: 0px 0px;
+}
+
+.icon-horizon-white {
+  background-position: -96px 0px;
+
+}
