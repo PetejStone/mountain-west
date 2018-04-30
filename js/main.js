@@ -1,10 +1,10 @@
 const navIcon = document.querySelector('#nav-icon');
 const testimony = document.querySelectorAll(".testimony");
 const user = document.querySelectorAll(".user");
-navIcon.addEventListener('click',()=> {
-  navIcon.classList.toggle("change");
-
-});
+const nav = document.querySelector('nav');
+const header = document.querySelector('header');
+const main = document.querySelector('main');
+const footer = document.querySelector('footer');
 
 
 //random user API
@@ -34,3 +34,15 @@ $.ajax({
 //--------------------------------------------------------------------------------------
 ////////////////////////End of Random User Generator///////////////////////
 //----------------------------------------------------------------------------------------
+
+//nav functionality
+navIcon.addEventListener('click',()=> {
+  navIcon.classList.toggle("change");
+
+  nav.classList.toggle('show');
+  header.classList.toggle('slide-left');
+  main.classList.toggle('slide-left');
+  footer.classList.toggle('slide-left');
+
+
+});

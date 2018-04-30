@@ -21,3 +21,18 @@
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
+
+nav,
+header,
+footer,
+main {
+  transition: all .5s;
+}
+
+.show {
+  transform: translateX(0%);
+}
+
+.slide-left {
+  transform: translateX(-160px);
+}
