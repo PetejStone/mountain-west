@@ -411,10 +411,14 @@ template {
   font-family: 'Source Sans Pro'; }
 
 .big-quote {
-  font-size: 1.2em; }
+  font-size: 1.2em;
+  align-self: center; }
   @media (min-width: 640px) {
     .big-quote {
       font-size: 2em; } }
+  @media (min-width: 640px) {
+    .big-quote {
+      font-size: 2.7em; } }
   .big-quote--mark {
     font-size: 6em;
     display: inline-block;

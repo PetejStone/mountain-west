@@ -6,8 +6,12 @@
 
 .big-quote {
   font-size: 1.2em;
+  align-self: center;
   @include mq(small) {
     font-size: 2em;
+  }
+  @include mq(small) {
+    font-size: 2.7em;
   }
   &--mark {
     font-size: 6em;
@@ -33,6 +37,7 @@ p {
     font-size: 1.2em;
     text-align: left;
 }
+
 }
 
 .user {
