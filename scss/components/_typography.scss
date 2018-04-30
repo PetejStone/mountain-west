@@ -5,7 +5,10 @@
 }
 
 .big-quote {
-  font-size: 3em;
+  font-size: 1.2em;
+  @include mq(small) {
+    font-size: 2em;
+  }
   &--mark {
     font-size: 6em;
     display: inline-block;
@@ -19,21 +22,26 @@
   }
 }
 
-
+ h2 {
+  text-align: center;
+}
+p {
+  text-align: center;
+  @include mq(medium) {
+    padding: 0;
+    margin: 2em;
+    font-size: 1.2em;
+    text-align: left;
+}
+}
 
 .user {
   font-weight: $font-weight--bold;
   font-size: 1em;
 }
 
-.history {
-  // & h2 {
-  //   color: $white;
-  //   border-bottom: 2px solid $white;
-  //   width: fit-content;
-  //   @extend %center;
-    padding-top: 10em;
-  //   text-shadow: 1px 1px 2px $black;
-  //
-  // }
+footer {
+  & p {
+    font-size: 12px;
+  }
 }

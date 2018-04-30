@@ -1,5 +1,5 @@
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro|Catamaran");
-#nav-icon, header h1, h2, .quote button, .history img {
+#nav-icon, header h1, .border-bottom, h2, .quote--intro, .quote button, .history img, .down {
   margin: 0 auto; }
 
 * {
@@ -8,6 +8,12 @@
 ul {
   text-decoration: none;
   list-style-type: none; }
+
+html, body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -405,7 +411,10 @@ template {
   font-family: 'Source Sans Pro'; }
 
 .big-quote {
-  font-size: 3em; }
+  font-size: 1.2em; }
+  @media (min-width: 640px) {
+    .big-quote {
+      font-size: 2em; } }
   .big-quote--mark {
     font-size: 6em;
     display: inline-block;
@@ -416,18 +425,33 @@ template {
     .big-quote--mark:first-child {
       transform: rotate(180deg); }
 
+h2 {
+  text-align: center; }
+
+p {
+  text-align: center; }
+  @media (min-width: 768px) {
+    p {
+      padding: 0;
+      margin: 2em;
+      font-size: 1.2em;
+      text-align: left; } }
+
 .user {
   font-weight: 700;
   font-size: 1em; }
 
-.history {
-  padding-top: 10em; }
+footer p {
+  font-size: 12px; }
 
 header {
   background-image: url("../images/mountains.jpg");
   background-size: cover;
   max-width: 100%;
-  height: 50em; }
+  height: 40em; }
+  @media (min-width: 640px) {
+    header {
+      height: 50em; } }
   header h1 {
     color: #fff;
     padding: 2em;
@@ -448,44 +472,73 @@ main {
   main .column-one,
   main .column-two {
     height: 100%;
-    width: 50%; }
+    width: 100%; }
+    @media (min-width: 768px) {
+      main .column-one,
+      main .column-two {
+        width: 50%; } }
   main .column-one {
-    border-right: 2px solid #cce6ff; }
-  main h2 {
-    text-align: center; }
-  main p {
-    padding: 0;
-    margin: 2em;
-    font-size: 2em; }
+    margin-bottom: 2em; }
+    @media (min-width: 640px) {
+      main .column-one {
+        margin-bottom: 0; } }
+    @media (min-width: 768px) {
+      main .column-one {
+        border-right: 2px solid #cce6ff; } }
   main .section-one {
     display: flex;
-    flex-direction: row; }
+    flex-direction: column;
+    margin-bottom: 5em; }
+    @media (min-width: 640px) {
+      main .section-one {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10em; } }
+
+.border-bottom {
+  border-bottom: 2px solid #cce6ff;
+  width: 40%; }
+  @media (min-width: 640px) {
+    .border-bottom {
+      display: none; } }
 
 .testimonials {
-  width: 100%;
-  margin-left: 2em; }
+  width: 100%; }
+  @media (min-width: 640px) {
+    .testimonials {
+      margin-left: 2em; } }
   .testimonials--intro {
-    width: 65%;
-    padding-left: 10em; }
+    width: 100%;
+    margin-bottom: 5em; }
+    @media (min-width: 640px) {
+      .testimonials--intro {
+        width: 65%;
+        padding-left: 10em;
+        margin-bottom: 10em; } }
   .testimonials--block {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%; }
+    @media (min-width: 640px) {
+      .testimonials--block {
+        display: flex;
+        flex-direction: row; } }
     .testimonials--block .big-quote {
-      width: 45%; }
-  .testimonials .corner-border {
-    border-right: 2px solid #cce6ff;
-    border-bottom: 2px solid #cce6ff;
-    width: 2em;
-    height: 2em;
-    float: right;
-    transform: translateY(-100%); }
+      margin: 0 auto;
+      width: 100%; }
+      @media (min-width: 640px) {
+        .testimonials--block .big-quote {
+          width: 45%; } }
   .testimonials--list {
     display: flex;
     flex-direction: column;
     float: right;
-    width: 35%;
+    width: 65%;
+    margin: 0 auto;
     margin-top: 1em; }
+    @media (min-width: 640px) {
+      .testimonials--list {
+        width: 35%; } }
   .testimonials .testimony {
     margin-top: 3em; }
     .testimonials .testimony p {
@@ -500,43 +553,59 @@ h2 {
 
 .chart__image {
   background-image: url("../images/chart.jpg");
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: bottom; }
+  background-position: bottom;
+  margin: 5em 0em; }
   .chart__image--layer {
-    height: 30em;
+    height: 17em;
     background-size: cover;
     background: linear-gradient(#fff, rgba(204, 230, 255, 0.6), #fff); }
+    @media (min-width: 640px) {
+      .chart__image--layer {
+        height: 30em; } }
 
 .family-owned {
-  margin-top: 10em;
-  width: 65%;
-  float: right;
-  padding-right: 10em; }
-  .family-owned .corner-border {
-    border-left: 2px solid #cce6ff;
-    border-bottom: 2px solid #cce6ff;
-    width: 2em;
-    height: 2em;
-    transform: translateY(-100%); }
+  margin-top: 5em; }
+  @media (min-width: 640px) {
+    .family-owned {
+      margin-top: 10em;
+      width: 65%;
+      float: right;
+      padding-right: 10em; } }
 
 .layer {
   clear: both; }
 
+.history {
+  padding-top: 10em; }
+
 .quote {
   display: flex;
-  flex-direction: row;
-  clear: both; }
+  flex-direction: column; }
+  @media (min-width: 640px) {
+    .quote {
+      display: flex;
+      flex-direction: row;
+      clear: both; } }
   .quote--intro {
-    width: 45%; }
+    width: 90%;
+    margin-top: 5em; }
+    @media (min-width: 640px) {
+      .quote--intro {
+        width: 45%; } }
   .quote--get {
-    width: 65%;
+    height: 12em;
+    width: auto;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     background-image: url("../images/clouds.jpg");
-    background-size: cover;
-    background-position: 15px -75px; }
+    background-size: cover; }
+    @media (min-width: 640px) {
+      .quote--get {
+        width: 65%;
+        height: auto; } }
   .quote--layer {
     width: 100%;
     height: 100%;
@@ -552,6 +621,22 @@ h2 {
     background-color: #69D36E;
     color: #fff;
     font-size: 1em;
+    cursor: pointer; }
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(#fff, rgba(204, 230, 255, 0.6)); }
+
+.social-nav {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  transform: scale(0.8); }
+  .social-nav li {
+    margin: 1em;
     cursor: pointer; }
 
 .bar1, .bar2, .bar3 {
@@ -582,5 +667,47 @@ h2 {
 .history img {
   display: block;
   max-width: 100%; }
+
+[class^=icon-] {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url("../icons/sprite.svg");
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: all .2s; }
+  [class^=icon-]:hover {
+    transform: scale(1.1); }
+
+.icon-github {
+  background-position: -82px 0; }
+
+.icon-linkedin {
+  background-position: -123px 0; }
+
+.icon-instagram {
+  background-position: -41px 0; }
+
+@media (min-width: 640px) {
+  .corner-border {
+    border-right: 2px solid #cce6ff;
+    border-bottom: 2px solid #cce6ff;
+    width: 2em;
+    height: 2em;
+    float: right;
+    transform: translateY(-100%); } }
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  border: solid #cce6ff;
+  border-width: 0 3px 3px 0;
+  display: block;
+  padding: 10px;
+  width: fit-content; }
+  @media (min-width: 640px) {
+    .down {
+      display: none; } }
 
 /*# sourceMappingURL=styles.css.map */

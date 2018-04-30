@@ -16,7 +16,7 @@ $.ajax({
     members = data.results;
 
 
-    for (let i=0; i<testimony.length; i++) {
+    for (let i=0; i < testimony.length; i++) {
       let photo = members[i].picture.thumbnail;
       let firstName = members[i].name.first[0].toUpperCase() + members[i].name.first.substring(1);
       let lastName = members[i].name.last[0].toUpperCase();

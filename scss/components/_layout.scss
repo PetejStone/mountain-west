@@ -3,7 +3,10 @@ header {
   background-image: url('../images/mountains.jpg');
   background-size: cover;
   max-width: 100%;
-  height: 50em;
+  height: 40em;
+  @include mq(small){
+    height: 50em;
+  }
   & h1 {
     color: $white;
     padding: 2em;
@@ -26,52 +29,77 @@ main {
   .column-one,
   .column-two {
     height: 100%;
-    width: 50%;
+    width: 100%;
+    @include mq(medium) {
+      width: 50%;
+    }
   }
   .column-one {
+    margin-bottom: 2em;
+    @include mq(small) {
+      margin-bottom: 0;
+    }
+    @include mq(medium) {
       border-right: 2px solid $main-color;
   }
-  & h2 {
-    text-align: center;
-  }
-  & p {
-    padding: 0;
-    margin: 2em;
-    font-size: 2em;
-  }
-
+}
   & .section-one {
-    @include flexy(flex, row);
+    @include flexy(flex, column);
+    margin-bottom: 5em;
+    @include mq(small) {
+      @include flexy(flex,row);
+      margin-bottom: 10em;
+    }
+  }
+}
+
+.border-bottom {
+  border-bottom: 2px solid $main-color;
+  width: 40%;
+  @extend %center;
+  @include mq(small) {
+    display: none;
   }
 }
 
 .testimonials {
     width: 100%;
-    margin-left: 2em;
-    &--intro {
-      width: 65%;
-      padding-left: 10em;
+    @include mq(small) {
+      margin-left: 2em;
     }
-    &--block {
-      @include flexy(flex,row);
+    &--intro {
       width: 100%;
+      margin-bottom: 5em;
+      @include mq(small) {
+        width: 65%;
+        padding-left: 10em;
+        margin-bottom: 10em;
+    }
+  }
+    &--block {
+      @include flexy(flex,column);
+      width: 100%;
+      @include mq(small) {
+        @include flexy(flex, row);
+      }
       & .big-quote {
-        width: 45%;
+        margin: 0 auto;
+        width: 100%;
+        @include mq(small) {
+          width: 45%;
+        }
       }
     }
-    & .corner-border {
-      border-right: 2px solid $main-color;
-      border-bottom: 2px solid $main-color;
-      width: 2em;
-      height: 2em;
-      float: right;
-      transform: translateY( -100%);
-    }
+
     &--list {
       @include flexy(flex, column);
       float: right;
-      width: 35%;
+      width: 65%;
+      margin: 0 auto;
       margin-top: 1em;
+      @include mq(small) {
+        width: 35%;
+      }
     }
     & .testimony {
       margin-top: 3em;
@@ -93,47 +121,64 @@ main {
   }
   .chart__image {
     background-image: url('../images/chart.jpg');
-    background-size: auto;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
+    margin: 5em 0em;
     &--layer {
-      height: 30em;
+      height: 17em;
       background-size: cover;
       background: linear-gradient($white, rgba(204, 230, 255, .6), $white);
+      @include mq(small) {
+        height: 30em;
+      }
     }
   }
 
   .family-owned {
-    margin-top: 10em;
-    width: 65%;
-    float: right;
-    padding-right: 10em;
-    & .corner-border {
-      border-left: 2px solid $main-color;
-      border-bottom: 2px solid $main-color;
-      width: 2em;
-      height: 2em;
-      transform: translateY(-100%);
-    }
+    margin-top: 5em;
+    @include mq(small){
+      margin-top: 10em;
+      width: 65%;
+      float: right;
+      padding-right: 10em;
   }
+}
 
   .layer {
     clear: both;
   }
 
+  .history {
+    padding-top: 10em;
+  }
   .quote {
-    @include flexy(flex, row);
-    clear: both;
+    @include flexy(flex, column);
+
+    @include mq(small){
+      @include flexy(flex, row);
+      clear: both;
+    }
     &--intro {
-      width: 45%;
+      width: 90%;
+      @extend %center;
+      margin-top: 5em;
+      @include mq(small) {
+        width: 45%;
+      }
     }
     &--get {
-      width: 65%;
+      height: 12em;
+      width: auto;
       @include flexy(flex, column-reverse, null, center);
       background-image: url('../images/clouds.jpg') ;
       background-size: cover;
-      background-position: 15px -75px;
+      @include mq(small) {
+        width: 65%;
+        height: auto;
+
     }
+  }
       &--layer {
         width: 100%;
         height: 100%;
@@ -150,6 +195,21 @@ main {
         color: $white;
         font-size: 1em;
         cursor: pointer;
-
       }
     }
+
+  footer {
+    @include flexy(flex, row, null, space-around);
+    align-items: center;
+    background: linear-gradient($white,rgba( 204, 230, 255,.6));
+  }
+
+  .social-nav {
+    @include flexy(flex, row);
+    padding: 0;
+    transform: scale(.8);
+    & li {
+      margin: 1em;
+      cursor: pointer;
+    }
+  }
