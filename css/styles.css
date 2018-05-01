@@ -1,4 +1,3 @@
-@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro|Catamaran");
 #nav-icon, header h1, .border-bottom, h2, .quote--intro, .quote button, .history img, .down {
   margin: 0 auto; }
 
@@ -594,7 +593,7 @@ h2 {
   @media (min-width: 768px) {
     .family-owned {
       margin-top: 10em;
-      width: 65%;
+      width: 80%;
       float: right;
       padding-right: 10em; } }
 
