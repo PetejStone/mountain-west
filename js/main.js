@@ -57,7 +57,8 @@ submit.addEventListener('click', (e)=> {
 });
 
 app.addEventListener('click', (e)=> {
-  overlay.style.display = 'block';
+  overlay.style.display = 'flex';
+  
 });
 
 cancel.addEventListener('click', (e)=> {
