@@ -25,4 +25,7 @@ nav {
     margin: .5em;
     padding: .5em;
   }
+  a {
+    @include link-reset($white);
+  }
 }

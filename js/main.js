@@ -5,8 +5,10 @@ const nav = document.querySelector('nav');
 const header = document.querySelector('header');
 const main = document.querySelector('main');
 const footer = document.querySelector('footer');
-
-
+const submit = document.querySelector('#submit');
+const overlay = document.querySelector('.overlay');
+const application = document.querySelector('#app');
+const cancel = document.querySelector('#cancel');
 //random user API
 
 $.ajax({
@@ -45,4 +47,19 @@ navIcon.addEventListener('click',()=> {
   footer.classList.toggle('slide-left');
 
 
+});
+
+//Form button functionilty
+submit.addEventListener('click', (e)=> {
+  e.preventDefault();
+  alert('Your Application Has Been Submitted!');
+  overlay.style.display = 'none';
+});
+
+app.addEventListener('click', (e)=> {
+  overlay.style.display = 'block';
+});
+
+cancel.addEventListener('click', (e)=> {
+  overlay.style.display = 'none';
 });

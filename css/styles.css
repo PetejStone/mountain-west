@@ -1,4 +1,6 @@
-#nav-icon, header h1, .border-bottom, h2, .quote--intro, .quote button, .history img, .down {
+#nav-icon, header h1, .border-bottom, h2, .quote--intro, .quote button, .services ul, .career ul, .history img, .about img,
+.services img,
+.career img, .down, .application {
   margin: 0 auto; }
 
 * {
@@ -425,6 +427,10 @@ nav {
     color: #fff;
     margin: .5em;
     padding: .5em; }
+  nav a {
+    text-decoration: none;
+    list-style-type: none;
+    color: #fff; }
 
 * {
   font-family: 'Source Sans Pro'; }
@@ -457,8 +463,7 @@ p {
     p {
       padding: 0;
       margin: 2em;
-      font-size: 1.2em;
-      text-align: left; } }
+      font-size: 1.2em; } }
 
 .user {
   font-weight: 700;
@@ -466,6 +471,10 @@ p {
 
 footer p {
   font-size: 12px; }
+
+#submit,
+#cancel {
+  cursor: pointer; }
 
 header {
   background-image: url("../images/mountains.jpg");
@@ -646,6 +655,22 @@ h2 {
     font-size: 1em;
     cursor: pointer; }
 
+.services ul {
+  list-style-type: disc;
+  width: fit-content;
+  padding-top: 1em; }
+
+.career ul {
+  list-style-type: disc;
+  width: fit-content;
+  padding-top: 1em; }
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0; }
+
 footer {
   display: flex;
   flex-direction: row;
@@ -703,6 +728,15 @@ main {
   display: block;
   max-width: 100%; }
 
+.about img,
+.services img,
+.career img {
+  width: 500px;
+  max-width: 100%;
+  display: block;
+  box-shadow: 2px 0px 5px #000;
+  margin-bottom: 6em; }
+
 [class^=icon-] {
   display: block;
   width: 25px;
@@ -744,5 +778,19 @@ main {
   @media (min-width: 640px) {
     .down {
       display: none; } }
+
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  background-color: rgba(204, 230, 255, 0.9);
+  top: 0;
+  display: none; }
+
+.application {
+  display: flex;
+  flex-direction: column;
+  width: 90%; }
 
 /*# sourceMappingURL=styles.css.map */

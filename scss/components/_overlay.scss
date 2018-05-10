@@ -1,0 +1,16 @@
+
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  background-color: rgba(204, 230, 255, .9);
+  top: 0;
+  display: none;
+}
+.application {
+  @include flexy(flex, column);
+  width: 90%;
+  @extend %center;
+
+}

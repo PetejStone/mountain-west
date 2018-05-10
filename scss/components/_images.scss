@@ -9,6 +9,19 @@
     display: block;
     max-width: 100%;
     @extend %center;
-  
+
+  }
+}
+
+.about,
+.services,
+.career {
+  & img {
+  width: 500px;
+  max-width: 100%;
+  display: block;
+  @extend %center;
+  box-shadow: 2px 0px 5px $black;
+  margin-bottom: 6em;
   }
 }
