@@ -1,0 +1,17 @@
+input[type='submit'] {
+  background-color: $nav-highlight;
+  color: $white;
+  height: 3em;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+button[id='cancel'] {
+  height: 3em;
+  background-color: $btn-grey;
+  color: $white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+}

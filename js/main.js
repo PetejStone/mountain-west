@@ -9,6 +9,7 @@ const submit = document.querySelector('#submit');
 const overlay = document.querySelector('.overlay');
 const application = document.querySelector('#app');
 const cancel = document.querySelector('#cancel');
+const form = document.querySelector('form');
 //random user API
 
 $.ajax({
@@ -50,7 +51,7 @@ navIcon.addEventListener('click',()=> {
 });
 
 //Form button functionilty
-submit.addEventListener('click', (e)=> {
+form.addEventListener('submit', (e)=> {
   e.preventDefault();
   alert('Your Application Has Been Submitted!');
   overlay.style.display = 'none';
@@ -58,7 +59,7 @@ submit.addEventListener('click', (e)=> {
 
 app.addEventListener('click', (e)=> {
   overlay.style.display = 'flex';
-  
+
 });
 
 cancel.addEventListener('click', (e)=> {

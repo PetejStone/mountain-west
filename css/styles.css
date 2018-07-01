@@ -472,6 +472,22 @@ p {
 footer p {
   font-size: 12px; }
 
+input[type='submit'] {
+  background-color: #69D36E;
+  color: #fff;
+  height: 3em;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px; }
+
+button[id='cancel'] {
+  height: 3em;
+  background-color: #B2AFB6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px; }
+
 #submit,
 #cancel {
   cursor: pointer; }
@@ -794,5 +810,21 @@ main {
   flex-direction: column;
   justify-content: center;
   width: 90%; }
+
+input[type='submit'] {
+  background-color: #69D36E;
+  color: #fff;
+  height: 3em;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px; }
+
+button[id='cancel'] {
+  height: 3em;
+  background-color: #B2AFB6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px; }
 
 /*# sourceMappingURL=styles.css.map */
