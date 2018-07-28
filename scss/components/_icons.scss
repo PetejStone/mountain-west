@@ -27,7 +27,7 @@
 }
 
 .corner-border {
-  @include mq(small){
+  @include mq(medium){
     border-right: 2px solid $main-color;
     border-bottom: 2px solid $main-color;
     width: 2em;
@@ -46,7 +46,7 @@
   padding: 10px;
   width: fit-content;
   @extend %center;
-  @include mq(small) {
+  @include mq(medium) {
     display: none;
   }
 }

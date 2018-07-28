@@ -774,7 +774,7 @@ main {
 .icon-instagram {
   background-position: -41px 0; }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .corner-border {
     border-right: 2px solid #cce6ff;
     border-bottom: 2px solid #cce6ff;
@@ -791,7 +791,7 @@ main {
   display: block;
   padding: 10px;
   width: fit-content; }
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     .down {
       display: none; } }
 
