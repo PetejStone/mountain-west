@@ -617,10 +617,9 @@ h2 {
   margin-top: 5em; }
   @media (min-width: 768px) {
     .family-owned {
-      margin-top: 10em;
       width: 80%;
-      float: right;
-      padding-right: 10em; } }
+      margin: 0 auto;
+      margin-top: 10em; } }
 
 .layer {
   clear: both; }
@@ -702,6 +701,10 @@ footer {
   .social-nav li {
     margin: 1em;
     cursor: pointer; }
+
+.max-content {
+  max-width: 1500px;
+  margin: 0 auto; }
 
 .bar1, .bar2, .bar3 {
   width: 35px;

@@ -138,10 +138,11 @@ main {
   .family-owned {
     margin-top: 5em;
     @include mq(medium){
-      margin-top: 10em;
+
       width: 80%;
-      float: right;
-      padding-right: 10em;
+      margin: 0 auto;
+      margin-top: 10em;
+
   }
 }
 
@@ -235,4 +236,9 @@ main {
       margin: 1em;
       cursor: pointer;
     }
+  }
+
+  .max-content {
+    max-width: 1500px;
+    margin: 0 auto;
   }
